@@ -1,6 +1,6 @@
 CC = gcc
-TARGET = SSTest
-OBJS = LinkedList.o SequentialSearch.o TestSS.o
+TARGET = BSTest
+OBJS = BinarySearch.o
 
 CFLAGS = -Wall
 LDFLAGS = -lc
@@ -10,7 +10,7 @@ all : $(TARGET)
 $(TARGET) : $(OBJS)
 	$(CC) $(LDFLAGS) -o $@ $^
 
-.c.o :
+%.o : %.c
 	$(CC) $(CFLAGS) -c -o $@ $<
 
 clean :
